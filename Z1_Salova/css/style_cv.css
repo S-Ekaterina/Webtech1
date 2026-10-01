@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+    grid-template-areas: "col1 col2";
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
+
+.col1 {
+    grid-area: col1;
+}
+
+.col2 {
+    grid-area: col2;
+}
+
+.columns {
+    padding: 13px;
+    background-color: #ffccd1;
+}
+
+address {
+    text-align: center;
+}
+
+.cv-ph {
+    margin-right: 0;
+}
