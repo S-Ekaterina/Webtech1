@@ -1,18 +1,16 @@
-<!-- Nazov - Profil -->
-<!-- Otazka navstevnıka stranky - Kto to je a zaujıma ma to? -->
-
 <!DOCTYPE html>
 <html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Profil</title>
+    <title>Životopis</title>
 
     <link rel="icon" href="../img/logo.png" type="image/png">
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/style_cv.css">
+    <link rel="stylesheet" href="../css/print.css" media="print">
 </head>
 
 <body>
@@ -26,8 +24,8 @@
     <button id="toggle">☰</button>
     <nav>
         <ul>
-            <li><b><a href="../index.html">Profil</a></b></li>
-            <li id="actual"><a href="pages/cv.html">Zivotopis</a></li>
+            <li><a href="../index.html">Profil</a></li>
+            <li id="actual"><b><a href="pages/cv.html">Zivotopis</a></b></li>
             <li><a href="../pages/workspace.html">Pracovne prostredie</a></li>
             <li><a href="../pages/schedule.html">Kedy ma zastihnete</a></li>
             <li><a href="../pages/map.html">Kde ma najdete</a></li>
@@ -37,19 +35,94 @@
     <main>
         <div class="container">
             <div class="columns col1">
-                <img class="photo cv-ph" alt="Moje foto" width="300" height="300" loading="lazy" src="../img/profil_photo.jpg">
+                <img class="photo cv-ph" alt="Moje foto" width="300" height="300" loading="lazy" src="../img/cv-photo.jpg">
                 <address>
                     <p>Kontaktné informácie</p>
-                    Napiš mi - <a href="mailto:katerina@gmail.com">Mail</a><br>
-                    Zavolaj mi - <a href="tel:+00000000000">Telefón</a>
+                    <p>Napiš mi - <a href="mailto:katerina@gmail.com" data-print="katerina@gmail.com">Mail</a></p>
+                    <p>Zavolaj mi - <a href="tel:+421000000165" data-print="+421000000165">Telefón</a></p>
                 </address>
             </div>
             <div class="columns col2">
                 <h1>Čo viem?</h1>
-                <p>V súčasnosti som študentom 3. ročníka bakalárskeho štúdia a aktívne sa rozvíjam ako programátor. Svoje projekty a sieť kontaktov budujem cez GitHub a LinkedIn, pričom momentálne pracujem na bakalárskej práci a hľadám si prácu v odbore. Moje praktické zručnosti čoskoro preverí aj účasť na nadchádzajúcom hackathone.</p>
-  
-                <p>Vo voľnom čase sa venujem aktivitám, ktoré rozvíjajú kreativitu a tímovú spoluprácu. S priateľmi radi hrávame kooperatívne videohry a stolovky (napríklad D&D), a taktiež radi navštevujeme kultúrne podujatia, ako bola naša nedávna návšteva výstavy modelov.</p>
-
+                <div class="section">
+                    <h3>Osobny profil</h3>
+                    <p>   Študujem informatiku v bakalárskom programe a mám silný záujem o programovanie a analytické myslenie. Rada sa učím nové technológie a riešim logické a technické výzvy. Záleží mi na kvalite práce – funkčnosť, čistý kód a prehľadnosť sú pre mňa dôležité. Špeciálne ma zaujíma vývoj webových aplikácií, kde môžem spájať logiku s prehľadným dizajnom.</p>
+                    <p>   Okrem technických zručností si cením zodpovednosť, tímovú spoluprácu a ochotu neustále na sebe pracovať. Rada sa zapájam do výziev, ako sú hackathony, a pracujem na vlastných projektoch. Momentálne hľadám príležitosť uplatniť svoje znalosti na reálnych projektoch a získavať praktické skúsenosti v IT.</p>
+                </div>
+                <div class="section">
+                    <h3>Dosiahnuté vzdelanie</h3>
+                    <div class="container-education">
+                        <a href="https://gimn2.edu.yar.ru/" class="item-education gymnasium">
+                            <p><b>(2010 - 2021)</b></p>
+                            <p>GYMNÁZIUM</p>
+                            <p>Stredná škola v Rusku</p>
+                        </a>
+                        <a href="https://www.fiit.stuba.sk/" class="item-education fiit">
+                            <p><b>(2023 - 2025)</b></p>
+                            <p>SLOVENSKÁ TECHNICKÁ UNIVERZITA V BRATISLAVE</p>
+                            <p>Fakulta informatiky a informačných technológií</p>
+                        </a>
+                        <a href="https://www.fei.stuba.sk/" class="item-education fei">
+                            <p><b>(2025 - súčasnosť)</b></p>
+                            <p>SLOVENSKÁ TECHNICKÁ UNIVERZITA V BRATISLAVE</p>
+                            <p>Fakulta elektrotechniky a informatiky</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="section">
+                    <h3>Počítačové zručnosti</h3>
+                    <div class="container-lang">
+                        <div class="item-lang"><strong>SQL</strong></div>
+                        <progress max="100" value="100"></progress>
+                        <span> - 100%; </span>
+                        <div class="item-lang"><strong>R</strong></div>
+                        <progress max="100" value="20"></progress>
+                        <span> - 20%; </span>
+                        <div class="item-lang"><strong>C</strong></div>
+                        <progress max="100" value="73"></progress>
+                        <span> - 73%; </span>
+                        <div class="item-lang"><strong>Java</strong></div>
+                        <progress max="100" value="60"></progress>
+                        <span> - 60%; </span>
+                        <div class="item-lang"><strong>Python</strong></div>
+                        <progress max="100" value="40"></progress>
+                        <span> - 40%; </span>
+                        <div class="item-lang"><strong>JavaScript</strong></div>
+                        <progress max="100" value="13"></progress>
+                        <span> - 13%; </span>
+                        <div class="item-lang"><strong>HTML / CSS</strong></div>
+                        <progress max="100" value="86"></progress>
+                        <span> - 86%; </span>
+                    </div>
+                </div>
+                <div class="section">
+                    <h3>Pracovné skúsenosti</h3>
+                    <p class="center"><b>Freelance vývojár / Web & Software Developer</b><br>
+                        (05/2025 – 12/2025)</p>
+                    <p>- Vývoj webových stránok na mieru pre
+                        konkrétnych klientov<br>
+                        - Vývoja údržba backendových riešení s
+                        databázovou logikou (SQL)<br>
+                        - Návrh funkčnosti, logiky aplikácií a
+                        jednoduchého UX<br>
+                        - Samostatná komunikácia s klientmi a
+                        realizácia projektov od zadania po odovzdanie</p>
+                </div>
+                <div class="section">
+                    <h3>Jazykové zručnosti</h3>
+                    <div class="container-lang">
+                        <div class="item-lang"><strong>Angličtina</strong></div>
+                        <progress max="100" value="42"></progress>
+                        <span> - 42%; </span>
+                        <div class="item-lang"><strong>Slovenčina</strong></div>
+                        <progress max="100" value="67"></progress>
+                        <span> - 67%; </span>
+                        <div class="item-lang"><strong>Ruština</strong></div>
+                        <progress max="100" value="99"></progress>
+                        <span> - 99%; </span>
+                    </div>
+                </div>
+                
             </div>
 
         </div>
