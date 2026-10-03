@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pracovné prostredie</title>
+
+    <link rel="icon" href="../img/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style-schedule.css">
+</head>
+
+<body>
+    <header>
+        <!-- Logo SVG inicialky + meno + Slogan -->
+        <a style="min-width: 20vw;"><img id="logo" src="../img/logo.png" alt="Logo">
+        <h1>Ekaterina Salova</h1></a>
+        <p style="min-width: 20vw;">Všetko, čo vytváraš, by malo obsahovať časť teba :)</p>
+    </header>
+
+    <button id="toggle">☰</button>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Profil</a></li>
+            <li><a href="../pages/cv.html">Zivotopis</a></li>
+            <li><a href="../pages/workspace.html">Pracovne prostredie</a></li>
+            <li id="actual"><b><a href="../pages/schedule.html">Kedy ma zastihnete</a></b></li>
+            <li><a href="../pages/map.html">Kde ma najdete</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Kedy mám čas?</h1>
+
+        <table>
+            <tr>
+                <th>Deň</th>
+                <th colspan="4">7:00-8:00</th>
+                <th colspan="4">8:00-9:00</th>
+                <th colspan="4">9:00-10:00</th>
+                <th colspan="4">10:00-11:00</th>
+                <th colspan="4">11:00-12:00</th>
+                <th colspan="4">12:00-13:00</th>
+                <th colspan="4">13:00-14:00</th>
+                <th colspan="4">14:00-15:00</th>
+                <th colspan="4">15:00-16:00</th>
+                <th colspan="4">16:00-17:00</th>
+                <th colspan="4">17:00-18:00</th>
+                <th colspan="4">18:00-19:00</th>
+                <th colspan="4">19:00-20:00</th>
+                <th colspan="4">20:00-21:00</th>
+            </tr>
+            <tr>
+                <td>Po</td>
+                <td colspan="8"></td>                       <!-- 7:00-8:59 -->
+                <td colspan="5">Telesná kultúra 5</td>      <!-- 9:00-10:15 -->
+                <td colspan="3"></td>                       <!-- 10:15-11:00 -->
+                <td colspan="8">Webové technológie 1</td>   <!-- 11:00-13:00 -->
+                <td colspan="8"></td> <!-- 13:00-15:00 -->
+                <td colspan="8">Lineárna algebra 2</td> <!-- 15:00-17:00 -->
+                <td colspan="16"></td> <!-- 17:00-21:00 -->
+            </tr>
+            <tr>
+                <td>Ut</td>
+                <td colspan="12"></td>                       <!-- 7:00-10:00 -->
+                <td colspan="8">Webové technológie 1</td> <!-- 10:00-12:00 -->
+                <td colspan="19"></td>                       <!-- 12:00-16:45 -->
+                <td colspan="9">Autoškola</td>   <!-- 16:45-19:00 -->
+                <td colspan="8"></td> <!-- 19:00-21:00 -->
+            </tr>
+        </table>
+
+
+    </main>
+
+    <footer>
+        <p>Web by <a href="https://www.linkedin.com/in/ekaterina-salova-3402763aa/" target="_blank">Ekaterina S</a></p>
+        <address>FEI STU, Bratislava</address>
+    </footer>
+
+
+</body>
+</html>

@@ -8,7 +8,7 @@
     display: block;
 }
 
-.item-overlay{
+.item-overlay {
     position: absolute;
     color: white;
     transform: translate(-50%, -50%);
