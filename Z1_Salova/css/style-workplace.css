@@ -1,0 +1,102 @@
+.container-overlay {
+    position: relative;
+    display: inline-block;
+}
+
+.work-photo {
+    max-width: 100%;
+    display: block;
+}
+
+.item-overlay {
+    position: absolute;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+
+.over-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.over-img {
+    border-radius: 15px;
+}
+
+.over-content p {
+    position: absolute;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 10px;
+    background: #1e1e1e;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.direction-top {
+    bottom: 100%;
+    left: 50%;
+}
+
+.direction-bottom {
+    top: 100%;
+    left: 50%;
+}
+
+.no-see {
+    display: none;
+}
+
+.over-1 {
+    top: 30%;
+    left: 10%;
+}
+
+.over-1:hover img, .over-1:hover p {
+    display: block;
+    border-radius: 15px;
+}
+
+.over-2 {
+    top: 30%;
+    left: 30%;
+}
+
+.over-2:hover img, .over-2:hover p {
+    display: block;
+    border-radius: 15px;
+}
+
+.over-3 {
+    top: 30%;
+    left: 50%;
+}
+
+.over-3:hover img, .over-3:hover p {
+    display: block;
+    border-radius: 15px;
+}
+
+.over-4 {
+    top: 30%;
+    left: 70%;
+}
+
+.over-4:hover img, .over-4:hover p {
+    display: block;
+    border-radius: 15px;
+}
+
+.over-5 {
+    top: 30%;
+    left: 90%;
+}
+
+.over-5:hover img, .over-5:hover p {
+    display: block;
+    border-radius: 15px;
+}
