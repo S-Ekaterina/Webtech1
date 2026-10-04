@@ -34,9 +34,21 @@
     <main>
         <h1>Kedy mám čas?</h1>
 
+        <div class="container-button">
+            <div class="today item-button-date">Dnes je <span id="current-date"></span></div>
+            <div class="item-button">
+                <button class="active" data-filter="all">Všetko</button>
+                <button data-filter="lecture">Prednášky</button>
+                <button data-filter="exercise culture">Cvičenia</button>
+            </div>
+        </div>
+        
+        <p id="status"></p>
+
+        <div class="container-table">
         <table>
             <tr>
-                <th>Deň</th>
+                <th colspan="2">Deň</th>
                 <th colspan="4">7:00-8:00</th>
                 <th colspan="4">8:00-9:00</th>
                 <th colspan="4">9:00-10:00</th>
@@ -53,24 +65,77 @@
                 <th colspan="4">20:00-21:00</th>
             </tr>
             <tr>
-                <td>Po</td>
-                <td colspan="8"></td>                       <!-- 7:00-8:59 -->
-                <td colspan="5">Telesná kultúra 5</td>      <!-- 9:00-10:15 -->
-                <td colspan="3"></td>                       <!-- 10:15-11:00 -->
-                <td colspan="8">Webové technológie 1</td>   <!-- 11:00-13:00 -->
+                <td colspan="2" class="tab-header">Po</td>
+                <td colspan="8"></td> <!-- 7:00-8:59 -->
+                <td colspan="5" class="culture">Telesná kultúra 5</td> <!-- 9:00-10:15 -->
+                <td colspan="3"></td> <!-- 10:15-11:00 -->
+                <td colspan="8" class="exercise">Webové technológie 1</td> <!-- 11:00-13:00 -->
                 <td colspan="8"></td> <!-- 13:00-15:00 -->
-                <td colspan="8">Lineárna algebra 2</td> <!-- 15:00-17:00 -->
+                <td colspan="8" class="lecture">Lineárna algebra 2</td> <!-- 15:00-17:00 -->
                 <td colspan="16"></td> <!-- 17:00-21:00 -->
             </tr>
             <tr>
-                <td>Ut</td>
+                <th colspan="58" class="between"></th>
+            </tr>
+            <tr>
+                <td colspan="2" class="tab-header">Ut</td>
                 <td colspan="12"></td>                       <!-- 7:00-10:00 -->
-                <td colspan="8">Webové technológie 1</td> <!-- 10:00-12:00 -->
+                <td colspan="8" class="lecture">Webové technológie 1</td> <!-- 10:00-12:00 -->
                 <td colspan="19"></td>                       <!-- 12:00-16:45 -->
-                <td colspan="9">Autoškola</td>   <!-- 16:45-19:00 -->
+                <td colspan="9" class="lecture">Autoškola</td>   <!-- 16:45-19:00 -->
                 <td colspan="8"></td> <!-- 19:00-21:00 -->
             </tr>
+            <tr>
+                <th colspan="58" class="between"></th>
+            </tr>
+            <tr>
+                <td colspan="2" class="tab-header">St</td>
+                <td colspan="24"></td>                       <!-- 7:00-13:00 -->
+                <td colspan="8" class="lecture">Webové technológie 1</td> <!-- 13:00-15:00 -->
+                <td colspan="8" class="exercise">Bakalársky projekt 1</td> <!-- 15:00-17:00 -->
+                <td colspan="16"></td> <!-- 17:00-21:00 -->
+            </tr>
+            <tr>
+                <th colspan="58" class="between"></th>
+            </tr>
+            <tr>
+                <td colspan="2" class="tab-header">Št</td>
+                <td colspan="39"></td> <!-- 7:00-16:45 -->
+                <td colspan="9" class="lecture">Autoškola</td> <!-- 16:45-19:00 -->
+                <td colspan="8"></td> <!-- 19:00-21:00 -->
+            </tr>
+            <tr>
+                <th colspan="58" class="between"></th>
+            </tr>
+            <tr>
+                <td colspan="2" class="tab-header">Pi</td>
+                <td colspan="4"></td> <!-- 7:00-8:00 -->
+                <td colspan="8" class="exercise">Lineárna algebra 2</td> <!-- 8:00-10:00 -->
+                <td colspan="44"></td> <!-- 10:00-21:00 -->
+            </tr>
         </table>
+        </div>
+
+        <br>
+
+        <table class="example">
+            <tr>
+                <td class="culture"></td>
+                <td> - Telesná kultúra</td>
+                <td></td>
+                <td class="lecture"></td>
+                <td> - Prednáška</td>
+                <td></td>
+                <td class="exercise"></td>
+                <td> - Cvičenie</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <label for="semester-progress">Priebeh semestra:</label>
+        <progress id="semester-progress" value="0" max="100"></progress>
+        <span id="progress-text">0%</span>
 
 
     </main>
@@ -79,6 +144,8 @@
         <p>Web by <a href="https://www.linkedin.com/in/ekaterina-salova-3402763aa/" target="_blank">Ekaterina S</a></p>
         <address>FEI STU, Bratislava</address>
     </footer>
+
+    <script src="../js/script.js"></script>
 
 
 </body>

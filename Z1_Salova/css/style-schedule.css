@@ -1,3 +1,158 @@
+:root {
+    --font-color: rgb(255, 255, 255);
+    --center-text: center;
+    --dashed-border: 1px dashed #000000;
+}
+
+.container-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-button {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item-button button {
+    color: white;
+    padding: 10px 25px;
+    background-color: #4c8ebe;
+    border: 1px solid rgb(128, 128, 128);
+    cursor: pointer;
+}
+
+.item-button button:hover {
+    background-color: #3573a4;
+}
+
+button.active {
+    background-color: #213951;
+    font-weight: bold;
+}
+
+button.active:hover {
+    background-color: #213951;
+}
+
+.lecture.hidden-cell,
+.exercise.hidden-cell,
+.culture.hidden-cell {
+    background: transparent;
+    background-color: inherit;
+    border-color: transparent;
+    border: 0;
+    color: transparent;
+    pointer-events: none;
+}
+
+.hidden-cell * {
+    visibility: hidden;
+}
+
+
+table {
+    background-color: white;
+    border-radius: 5px;
+    table-layout: fixed;
+    width: 100%;
+}
+
 table, td, th {
-    border: 1px solid black;
+    text-align: var(--center-text);
+}
+
+th, .tab-header {
+    border: 1px dashed #979797;
+    background-color: #aaaaaa;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+td {
+    height: 50px;
+}
+
+tr:nth-of-type(4n) {
+    background-color: #ededed;
+}
+
+.culture {
+    background-color: rgb(255, 208, 208);
+    border: var(--dashed-border);
+}
+
+.lecture {
+    background-color: #90ee90;
+    border: var(--dashed-border);
+}
+
+.exercise {
+    background-color: #e0ffff;
+    border: var(--dashed-border);
+}
+
+.example {
+    width: auto;
+    padding: 5px;
+}
+
+.example .culture, .example .lecture, .example .exercise {
+    width: 50px;
+}
+
+.example td {
+    height: auto;
+}
+
+progress {
+    width: 100%;
+    height: 15px;
+    appearance: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #ffffff; 
+}
+
+progress::-webkit-progress-value {
+  background-color: #9e1b22; 
+}
+
+label, #progress-text, #status {
+    display: block;
+    text-align: var(--center-text);
+}
+
+.culture.active-subject {
+    background-color: #611b1b;
+    color: var(--font-color);
+}
+
+.lecture.active-subject {
+    background-color: #1f521f;
+    color: var(--font-color);
+}
+
+.exercise.active-subject {
+    background-color: #1e5656;
+    color: var(--font-color);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.875rem;
+    }
+
+    .item-button {
+        flex-direction: column;
+    }
 }
