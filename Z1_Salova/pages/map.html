@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pracovné prostredie</title>
+
+    <link rel="icon" href="../img/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style-map.css">
+</head>
+
+<body>
+    <header>
+        <!-- Logo SVG inicialky + meno + Slogan -->
+        <a style="min-width: 20vw;"><img id="logo" src="../img/logo.png" alt="Logo">
+        <h1>Ekaterina Salova</h1></a>
+        <p style="min-width: 20vw;">Všetko, čo vytváraš, by malo obsahovať časť teba :)</p>
+    </header>
+
+    <button id="toggle">☰</button>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Profil</a></li>
+            <li><a href="../pages/cv.html">Zivotopis</a></li>
+            <li><a href="../pages/workspace.html">Pracovne prostredie</a></li>
+            <li><a href="../pages/schedule.html">Kedy ma zastihnete</a></li>
+            <li id="actual"><b><a href="../pages/map.html">Kde ma najdete</a></b></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Odkiaľ dochádzam?</h1>
+
+        <div id="map"></div>
+
+
+    </main>
+
+    <footer>
+        <p>Web by <a href="https://www.linkedin.com/in/ekaterina-salova-3402763aa/" target="_blank">Ekaterina S</a></p>
+        <address>FEI STU, Bratislava</address>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+        const map = L.map("map").setView(
+            [48.151965, 17.072995],
+            15
+        );
+    </script>
+    <script src="../js/script-map.js"></script>
+
+
+</body>
+</html>
