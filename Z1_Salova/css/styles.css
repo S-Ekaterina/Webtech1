@@ -185,11 +185,11 @@ footer {
     background-color: var(--color-footer);
     color: var(--color-white);
     text-align: center;
-    padding: 5px 0px 15px 0px;
+    padding: 5px 0px 5px 0px;
     overflow: hidden;
 }
 
-footer a {
+.linkedin {
     color: var(--color-footer-accent);
     font-weight: bold;
     font-family: var(--text-special);
@@ -204,6 +204,7 @@ footer a {
     margin-right: 50px;
     margin-bottom: 16px;
     border-radius: 8px;
+    border: 2px solid var(--color-accent);
     height: auto;
 }
 
@@ -218,6 +219,20 @@ aside {
 aside span {
     font-family: var(--text-aside);
 }
+
+details {
+    cursor: pointer;
+}
+
+summary {
+    padding: 5px;
+}
+
+main ul li {
+    list-style: none;
+    padding: 5px;
+}
+
 /* index */
 
 
@@ -246,6 +261,8 @@ h2 {
 .col1 img {
     position: sticky;
     top: 170px;
+    border: 2px solid var(--color-accent);
+    z-index: 2;
 }
 
 .col1 address {
@@ -253,7 +270,7 @@ h2 {
     top: 390px;
 }
 
-address a {
+.contact {
     background-color: var(--color-accent);
     font-family: var(--text-aside);
     color: var(--color-white);
@@ -638,6 +655,7 @@ label, #progress-text, #status {
 #map {
     height: 400px;
     width: 100%;
+    z-index: 8;
 }
 /* map */
 
