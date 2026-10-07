@@ -87,7 +87,7 @@ body {
 
 header {
     background-color: var(--color-main);
-    height: 64px;
+    height: 60px;
     position: fixed;
     top: 0;
     left: 0;
@@ -111,7 +111,8 @@ header p {
 }
 
 #logo {
-    max-width: 50px;
+    width: 40px;
+    border-radius: 10px;
 }
 
 #toggle {
@@ -228,9 +229,14 @@ summary {
     padding: 5px;
 }
 
+main ul {
+    padding-inline-start: 10px;
+}
+
 main ul li {
     list-style: none;
     padding: 5px;
+    
 }
 
 /* index */
@@ -387,6 +393,7 @@ address {
 
 .work-photo {
     max-width: 100%;
+    position: relative;
     display: block;
 }
 
@@ -668,7 +675,8 @@ label, #progress-text, #status {
     }
     header {
         background-color: var(--color-nav);
-        padding-right: 40px;
+        text-align: center;
+        padding: 5px 70px 5px 5px;
     }
     #toggle {
         display: block;
@@ -687,6 +695,56 @@ label, #progress-text, #status {
 
 
 @media screen and (max-width: 768px) {
+    /* all */
+    footer {
+        font-size: 0.8rem;
+    }
+    /* all */
+
+
+    /* cv */
+    .container {
+        display: block;
+        overflow: hidden;
+        
+    }
+
+    .col1 {
+        float: left;
+        width: 100%;
+        height: auto;
+    }
+
+    .col1 address {
+        display: none;
+    }
+
+    .col2 {
+        display: block;
+        float: none;
+        width: auto;
+    }
+
+    .col1 img {
+        margin: 30px;
+        position: static;
+    }
+
+    .container-education {
+        flex-direction: column;
+    }
+
+    .item-education {
+        width: 100%;
+    }
+
+    .container-lang  {
+        width: 100%;
+    }
+    /* cv */
+
+
+
     /* workplace */
     .circle {
         display: none;
@@ -743,13 +801,11 @@ label, #progress-text, #status {
 @media screen and (max-width: 500px) {
     /* all */
     body {
-        padding-top: 100px;
+        padding-top: 130px;
     }
     header{
         display: block;
-        text-align: center;
-        padding-right: 40px;
-        height: 100px;
+        height: 120px;
     }
     #toggle {
         top: 30px;

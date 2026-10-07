@@ -25,3 +25,7 @@ L.marker([48.151965, 17.072995])
     .addTo(map)
     .bindPopup("FEI STU Bratislava")
     .openPopup();
+
+L.marker([48.1700724, 17.2127977])
+    .addTo(map)
+    .bindPopup("Bydlisko");

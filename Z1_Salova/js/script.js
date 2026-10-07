@@ -74,7 +74,7 @@ else {
     const cells = currentRow.querySelectorAll('td');
 
     for (const [index, cell] of cells.entries()) {
-      if (index == 0) {
+      if (index === 0) {
         continue;
       }
 
@@ -131,6 +131,12 @@ else {
 // filter
 const buttons = document.querySelectorAll('.item-button button');
 const items = document.querySelectorAll('.lecture, .exercise, .culture');
+const statusFilter = document.getElementById('status-filter');
+let isMatch = false;
+
+if (items.length < 0) {
+  statusFilter.textContent = 'Nenašli sa žiadne výsledky';
+}
 
 items.forEach(item => {
   if (roundedValue <= 0 || roundedValue >= 100) {
@@ -140,6 +146,7 @@ items.forEach(item => {
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
+    isMatch = false;
     document.querySelector('.item-button button.active').classList.remove('active');
     button.classList.add('active');
 
@@ -156,6 +163,7 @@ buttons.forEach(button => {
 
       if (filterAttr === 'all') {
         item.classList.remove('hidden-cell');
+        isMatch = true;
         return;
       }
       const filters = filterAttr.split(' ');
@@ -163,11 +171,16 @@ buttons.forEach(button => {
 
       if (hasMatch) {
         item.classList.remove('hidden-cell');
+        isMatch = true;
       } 
       else {
         item.classList.add('hidden-cell');
       }
     });
+    if (!isMatch) {
+      statusFilter.textContent = `Nenašli sa žiadne výsledky ${items.length}`;
+    }
+
   });
 });
 // filter
