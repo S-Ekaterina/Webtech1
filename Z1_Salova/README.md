@@ -5,9 +5,7 @@ vratane licencie) a jedna veta o tom, ci a ako ste pouzili AI nastroje. -->
 TODO:
 - validator
 - README
-- hamburger menu
 - osobne foto - workplace
-- media query mapa
 
 Zdroje:
 Fonts:

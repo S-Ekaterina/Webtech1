@@ -178,7 +178,7 @@ buttons.forEach(button => {
       }
     });
     if (!isMatch) {
-      statusFilter.textContent = `Nenašli sa žiadne výsledky ${items.length}`;
+      statusFilter.textContent = 'Nenašli sa žiadne výsledky';
     }
 
   });

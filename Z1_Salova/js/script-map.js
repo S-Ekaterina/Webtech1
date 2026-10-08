@@ -35,6 +35,8 @@ const school = L.marker([48.151965, 17.072995])
 const home = L.marker([48.1700724, 17.2127977])
     .addTo(map)
     .bindPopup(`<b>Bydlisko</b>`);
+
+loadMarkersFromStorage();
 // map
 
 
@@ -49,6 +51,43 @@ pointers.forEach(pointers => {
     selectElement.appendChild(option);
 });
 // select pointers
+
+
+
+// localStorage
+function loadMarkersFromStorage() {
+    const savedData = localStorage.getItem('myMapMarkers');
+    
+    if (savedData) {
+        const parsedMarkers = JSON.parse(savedData);
+        
+        parsedMarkers.forEach(data => {
+            const marker = L.marker([data.lat, data.lng])
+                .addTo(map)
+                .bindPopup(`<b>${data.name}</b>`);
+            
+            marker.pointName = data.name;
+            markers.push(marker);
+
+            const option = document.createElement('option');
+            option.value = data.name;
+            option.textContent = data.name;
+
+            selectElement.appendChild(option);
+        });
+    }
+}
+//
+function saveMarkersToStorage() {
+    const dataToSave = markers.map(m => ({
+        lat: m.getLatLng().lat,
+        lng: m.getLatLng().lng,
+        name: m.pointName
+    }));
+    
+    localStorage.setItem('myMapMarkers', JSON.stringify(dataToSave));
+}
+// localStorage
 
 
 
@@ -68,6 +107,8 @@ map.on('click', function(e) {
             .bindPopup(`<b>${markerName}</b>`)
         newMarker.pointName = markerName; 
         markers.push(newMarker);
+
+       saveMarkersToStorage();
 
 
 

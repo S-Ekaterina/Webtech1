@@ -1,10 +1,16 @@
 const toggleBtn = document.getElementById('toggle');
-  const navMenu = document.querySelector('nav');
+const navMenu = document.querySelector('nav');
 
-  toggleBtn.addEventListener('click', () => {
-    const isOpen = navMenu.classList.toggle('active');
+toggleBtn.addEventListener('click', () => {
+  const isOpen = navMenu.classList.toggle('active');
 
-    toggleBtn.textContent = isOpen ? '✕' : '☰';
-
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
+  if (isOpen) {
+    toggleBtn.textContent = '✕';
+    document.body.style.overflow = 'hidden';
+  }
+  else {
+    toggleBtn.textContent = '☰';
+    document.body.style.overflow = '';
+  }
+  
+});
