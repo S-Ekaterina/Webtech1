@@ -185,8 +185,3 @@ buttons.forEach(button => {
 });
 // filter
 
-
-
-// map
-
-// map

@@ -41,6 +41,23 @@
         <h1>Odkiaľ dochádzam?</h1>
 
         <h2>Veľa sa pohybujem po meste, takže mám veľa zaujímavých miest</h2>
+        
+        <p>Kliknite na mapu, pridajte nové body a zistite ich vzdialenosť od školy alebo bydliska</p>
+
+        <p>Vzdialenosť medzi 
+            <select id="point-select">
+                <option value="" disabled selected>Vyberte bod</option>
+            </select>
+             a 
+            <select id="target-select">
+                <option value="" disabled selected>Vyberte cieľ</option>
+                <option value="school">Škola</option>
+                <option value="home">Bydlisko</option>
+            </select>
+            <button id="distance">Spočítať vzdialenosť</button>
+        </p>
+
+        <p id="if-error-map"></p>
 
         <div id="map"></div>
 
@@ -58,12 +75,7 @@
         <p>&copy; 2026 <a class="linkedin" href="https://www.linkedin.com/in/ekaterina-salova-3402763aa/" target="_blank">Ekaterina S</a></p>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-        const map = L.map("map").setView(
-            [48.151965, 17.072995],
-            15
-        );
-    </script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="../js/script-map.js"></script>
 
 
