@@ -100,6 +100,7 @@ targetSelect.addEventListener('change', (event) => {
 
 // distance between points
 const R = 6371;
+let polyline = null;
 distanceButton.addEventListener('click', function(e){
     if (selectedPoint === "") {
         isErrorText.textContent = 'Zabudli ste vybrat bod';
@@ -116,7 +117,7 @@ distanceButton.addEventListener('click', function(e){
         const markerPoint = markers.find(item => item.pointName === selectedPoint);
         let pointB = [];
         let markerTarget;
-        if (selectedTarget === "school") {
+        if (selectedTarget === "FEI STU Bratislava") {
             pointB = [48.151965, 17.072995];
             markerTarget = school;
         } 
@@ -145,7 +146,11 @@ distanceButton.addEventListener('click', function(e){
         
 
 
-        const polyline = L.polyline(pointsAB, {
+        if (polyline) {
+            polyline.remove();
+        }
+        
+        polyline = L.polyline(pointsAB, {
             color: '#9e1b22',
             weight: 4,
             opacity: 1,
