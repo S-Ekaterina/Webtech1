@@ -7,8 +7,6 @@ TODO:
 - README
 - hamburger menu
 - osobne foto - workplace
-- mapa
-- mapa bez bodov
 - media query mapa
 
 Zdroje:
