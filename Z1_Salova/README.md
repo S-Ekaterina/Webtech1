@@ -1,14 +1,13 @@
-<!-- strucny popis na par riadkov: meno a kruzok, odkaz na stranku na skolskom
-serveri, 2–3 vety o obsahu webu, zoznam zdrojov (fotografie, mapove podklady, kniznica, font
-vratane licencie) a jedna veta o tom, ci a ako ste pouzili AI nastroje. -->
+Ekaterina Salova (Pondelok 11:00)
 
-TODO:
-- validator
-- README
-- osobne foto - workplace
+Odkaz na stránku: https://webte1.fei.stuba.sk/~xsalova/Z1_Salova/index.html
+
+Vytvorila som svoju osobnú online vizitku, na ktorej prezentujem informácie o sebe, svojom štúdiu a záľubách. Pri tvorbe webu som sa snažila nie len splniť technické požiadavky zadania, ale vložiť doň aj kus svojej osobnosti.
 
 Zdroje:
-Fonts:
+Fotografie - Vlastné autorské fotografie
+Mapové podklady - OpenStreetMap (licencia Open Data Commons Open Database License); Leaflet.js (licencia BSD 2-Clause)
+Fonts - 
 - Nazov: "Caveat"
     URL: [Google Fonts](https://fonts.google.com/specimen/Caveat?preview.script=Latn&preview.lang=sk_Latn)
     Licencia: SIL Open Font License, 1.1
@@ -21,3 +20,6 @@ Fonts:
 - Nazov: "Fuzzy"
     URL: [Google Fonts](https://fonts.google.com/specimen/Fuzzy+Bubbles?preview.script=Latn&query=fuzzy)
     Licencia: SIL Open Font License, 1.1
+
+
+Použitie AI - AI nástroje som použila na vyhľadávanie informácií, inšpiráciu pri návrhu kódových konštrukcií a korektúru slovenského prekladu.

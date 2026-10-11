@@ -607,9 +607,11 @@ th, .tab-header {
     border: 1px dashed var(--color-tab-header-border);
     background-color: var(--color-tab-header);
     border-radius: 3px;
+    width: auto;
     font-weight: bold;
     font-family: var(--text-aside);
 }
+
 
 td {
     height: 50px;
