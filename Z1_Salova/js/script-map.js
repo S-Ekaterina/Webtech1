@@ -11,6 +11,7 @@ const distanceButton = document.getElementById('distance');
 const isErrorText = document.getElementById('if-error-map');
 let selectedPoint = "";
 let selectedTarget = "";
+// localStorage.clear();
 
 
 // map
@@ -40,28 +41,22 @@ loadMarkersFromStorage();
 // map
 
 
-
-// select pointers
-pointers.forEach(pointers => {
-    const option = document.createElement('option');
-    
-    option.value = pointers;
-    option.textContent = pointers.name;
-    
-    selectElement.appendChild(option);
-});
-// select pointers
-
-
-
 // localStorage
 function loadMarkersFromStorage() {
     const savedData = localStorage.getItem('myMapMarkers');
+    selectElement.innerHTML = '<option value="" disabled selected>Vyberte bod</option>';
+    
+    markers.forEach(marker => map.removeLayer(marker));
+    markers.length = 0;
+    pointers.length = 0;
     
     if (savedData) {
         const parsedMarkers = JSON.parse(savedData);
         
+        
         parsedMarkers.forEach(data => {
+            pointers.push({name: data.name, lat: data.lat, lng: data.lng});
+
             const marker = L.marker([data.lat, data.lng])
                 .addTo(map)
                 .bindPopup(`<b>${data.name}</b>`);
@@ -69,16 +64,19 @@ function loadMarkersFromStorage() {
             marker.pointName = data.name;
             markers.push(marker);
 
+
             const option = document.createElement('option');
             option.value = data.name;
             option.textContent = data.name;
 
             selectElement.appendChild(option);
+
         });
     }
 }
 //
 function saveMarkersToStorage() {
+    localStorage.clear();
     const dataToSave = markers.map(m => ({
         lat: m.getLatLng().lat,
         lng: m.getLatLng().lng,
@@ -92,7 +90,6 @@ function saveMarkersToStorage() {
 
 
 // add new marker
-let count = pointers.length;
 map.on('click', function(e) {
     const markerLat = e.latlng.lat;
     const markerLng = e.latlng.lng;
@@ -100,7 +97,7 @@ map.on('click', function(e) {
     const markerName = prompt("Zadajte názov bodu:", "");
 
     if (markerName) {
-        pointers.push({id: count, name: markerName, lat: markerLat, lng: markerLng});
+        pointers.push({name: markerName, lat: markerLat, lng: markerLng});
     
         const newMarker = L.marker([markerLat, markerLng])
             .addTo(map)
@@ -118,8 +115,6 @@ map.on('click', function(e) {
         option.textContent = markerName;
 
         selectElement.appendChild(option);
-        
-        count++;
 
     }
 });
