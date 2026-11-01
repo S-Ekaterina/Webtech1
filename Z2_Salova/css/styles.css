@@ -1,0 +1,261 @@
+:root {
+    /* fonts */
+    --text: "Roboto", sans-serif;
+    --text-italic: "Handlee", sans-serif;
+    --text-special: "Caveat", sans-serif;
+    /* fonts */
+}
+
+
+/* fonts */
+@font-face {
+    font-family: "Caveat";
+    src: url("../fonts/Caveat.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Handlee";
+    src: url("../fonts/Handlee.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto.ttf") format("truetype");
+}
+/* fonts */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 50px;
+    background-color: #dcdcdc;
+    font-family: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h5 {
+    text-align: center;
+}
+
+h1 {
+    margin: 50px 0px;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.navbar {
+    position: fixed;
+}
+
+.restaurant-filters {
+    margin: 30px 10px; 
+    padding: 20px; 
+    background-color: #f5f5f5; 
+    border-radius: 5px;
+
+}
+
+section {
+    margin: 30px 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+section button {
+    margin: 0px 10px;
+}
+
+#eat-meat {
+    background-color: #292a2f;
+    color: white;
+}
+
+#eat-meat a {
+    color: white;
+    font-weight: bold;
+}
+
+#eat-meat a.active, #eat-meat a:hover,
+#eat-meat p.badge-price {
+    color: #f26522;
+}
+
+#eat-meat button {
+    color: #f26522;
+    background-color: #16171a;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#eat-meat .day-header-wrapper {
+    text-align: center;
+    background-color: #16171a;
+}
+
+#menu-restaurant-1 li:hover {
+    background-color: #16171a;
+}
+
+#fei {
+    background-color: #97bcff;
+}
+
+#fei a {
+    font-weight: bold;
+}
+
+#fei a.active, #fei a:hover,
+#fei p.badge-price {
+    color: #1a4fb2;
+}
+
+#fei button {
+    color: #97bcff;
+    background-color: #1a4fb2;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#fei .day-header-wrapper {
+    text-align: center;
+    background-color: #608ee5;
+}
+
+#menu-restaurant-2 li:hover {
+    background-color: #608ee5;
+}
+
+#fiit {
+    background-color: #9ce6ff;
+}
+
+#fiit a {
+    font-weight: bold;
+}
+
+#fiit a.active, #fiit a:hover,
+#fiit p.badge-price {
+    color: #007095;
+}
+
+#fiit button {
+    color: #9ce6ff;
+    background-color: #007095;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#fiit .day-header-wrapper {
+    text-align: center;
+    background-color: #5dbddc;
+}
+
+#menu-restaurant-3 li:hover {
+    background-color: #5dbddc;
+}
+
+#project {
+    background-color: #caa4ff;
+    padding: 35px;
+}
+
+.menu-day {
+    display: flex;
+    justify-content: center;
+    flex-wrap: balance;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-day a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#menu-restaurant-1, #menu-restaurant-2, #menu-restaurant-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px;
+    padding: 0;
+    list-style: none;
+}
+
+#menu-restaurant-1 li, #menu-restaurant-2 li, #menu-restaurant-3 li {
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+footer {
+    background-color: #222222;
+    color: #757575;
+    padding: 20px;
+}
+
+.allergy {
+    font-size: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        margin: 0 5vw;
+    }
+
+    nav {
+        padding: 0 10vw;
+    }
+
+    footer {
+        padding: 20px 5vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        scroll-padding-top: 110px;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+
+    #menu-restaurant-1, #menu-restaurant-2, #menu-restaurant-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    h1 {
+        padding: 0px 20px;
+    }
+}

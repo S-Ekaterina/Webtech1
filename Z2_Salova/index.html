@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Prehľad denného obedového menu v reštauráciách a jedálňach v okolí FEI a FIIT STU.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Obedové menu v okolí fakulty</title>
+    <meta property="og:title" content="Obedové menu v okolí fakulty">
+    <meta property="og:description" content="Denné menu Eat & Meat, Jedáleň FEI a Jedáleň FIIT na jednom mieste.">
+    <meta property="og:image" content="favicon.png">
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>  
+                        <span class="icon-bar"></span>                       
+                    </button>
+                    <a class="navbar-brand" href="index.html">Čo dnes papať?</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="index.html">Menu<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#eat-meat">Eat&Meat</a></li>
+                                <li><a href="#fei">Jedalen na FEI</a></li>
+                                <li><a href="#fiit">Jedalen na FIIT</a></li>
+                                <li><a href="#project">O projekte</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Obedové menu v okolí fakulty</h1>
+
+        <div class="restaurant-filters">
+            <strong>Zobraziť reštaurácie:</strong>
+            <label style="margin-left: 15px; cursor: pointer;">
+                <input type="checkbox" id="filter-eat-meat" checked> Eat & Meat
+            </label>
+            <label style="margin-left: 15px; cursor: pointer;">
+                <input type="checkbox" id="filter-fei" checked> Jedáleň na FEI
+            </label>
+            <label style="margin-left: 15px; cursor: pointer;">
+                <input type="checkbox" id="filter-fiit" checked> Jedáleň na FIIT
+            </label>
+        </div>
+
+        <!-- Indikátor načítavania -->
+        <div id="loading-spinner" style="display: none; margin: 15px 0; font-weight: bold; color: #337ab7;">
+            Načítavam a spracovávam menu...
+        </div>
+
+        <section id="eat-meat">
+            <h2>Eat & Meat</h2>
+            <br>
+            <p>
+                Posledna aktualizacia: <time class="refresh-time">00:00</time>;
+                <button class="refresh-btn">Aktualizovať menu</button>
+                alebo
+                <button class="delete-btn">Vymazať dáta</button>
+            </p>
+            <p>
+                Web stranka: <a href="https://eatandmeet.sk/" target="_blank">Eat & Meat</a>
+            </p>
+            <p>
+                Adresa: Staré Grunty 36; Átriaky, Blok AD-U
+            </p>
+            <br><br>
+            <ul class="menu-day">
+                <li><a href="#day-1">Pondelok</a></li>
+                <li><a href="#day-2">Utorok</a></li>
+                <li><a href="#day-3">Streda</a></li>
+                <li><a href="#day-4">Štvrtok</a></li>
+                <li><a href="#day-5">Piatok</a></li>
+                <li><a href="#day-6">Celý týždeň</a></li>
+            </ul>
+            <ul id="menu-restaurant-1"></ul>
+        </section>
+
+        <section id="fei">
+            <h2>Jedalen na FEI</h2>
+            <br>
+            <p>
+                Posledna aktualizacia: <time class="refresh-time">00:00</time>;
+                <button class="refresh-btn">Aktualizovať menu</button>
+                alebo
+                <button class="delete-btn">Vymazať dáta</button>
+            </p>
+            <p>
+                Web stranka: <a href="https://www.jedalen.stuba.sk/webkredit/Ordering/Menu" target="_blank">Jedalen na FEI</a>
+            </p>
+            <p>
+                Adresa: Ilkovičova 3; Blok E
+            </p>
+            <br><br>
+            <ul class="menu-day">
+                <li><a href="#day-1">Pondelok</a></li>
+                <li><a href="#day-2">Utorok</a></li>
+                <li><a href="#day-3">Streda</a></li>
+                <li><a href="#day-4">Štvrtok</a></li>
+                <li><a href="#day-5">Piatok</a></li>
+                <li><a href="#day-6">Celý týždeň</a></li>
+            </ul>
+            <ul id="menu-restaurant-2"></ul>
+        </section>
+
+        <section id="fiit">
+            <h2>Jedalen na FIIT</h2>
+            <br>
+            <p>
+                Posledna aktualizacia: <time class="refresh-time">00:00</time>;
+                <button class="refresh-btn">Aktualizovať menu</button>
+                alebo
+                <button class="delete-btn">Vymazať dáta</button>
+            </p>
+            <p>
+                Web stranka: <a href="http://www.freefood.sk/" target="_blank">Jedalen na FIIT</a>
+            </p>
+            <p>
+                Adresa: Ilkovičova 2; Fakulta informatiky a informačných technológií STU
+            </p>
+            <br><br>
+            <ul class="menu-day">
+                <li><a href="#day-1">Pondelok</a></li>
+                <li><a href="#day-2">Utorok</a></li>
+                <li><a href="#day-3">Streda</a></li>
+                <li><a href="#day-4">Štvrtok</a></li>
+                <li><a href="#day-5">Piatok</a></li>
+                <li><a href="#day-6">Celý týždeň</a></li>
+            </ul>
+            <ul id="menu-restaurant-3"></ul>
+        </section>
+
+        <section id="project">
+            <h2>O projekte</h2>
+            <p>Tento webový projekt vznikol v rámci predmetu <strong>WEBTE1</strong>. Zobrazuje denné obedové menu v okolí FEI a FIIT STU v Bratislave.</p>
+            <h3>Zdroje dát:</h3>
+            <ul>
+                <li><a href="https://eatandmeet.sk/" target="_blank">Eat & Meat</a></li>
+                <li><a href="https://www.jedalen.stuba.sk/webkredit/Ordering/Menu" target="_blank">Jedáleň na FEI STU</a></li>
+                <li><a href="http://www.freefood.sk/" target="_blank">Jedáleň na FIIT STU</a></li>
+            </ul>
+            <h3>Spracovanie dát a použité knižnice:</h3>
+            <p>Stránky reštaurácií sa načítavajú asynchrónne cez jQuery.get(), spracovávajú pomocou DOMParser a ukladajú do localStorage. Použité knižnice: Bootstrap 3.4.1 a jQuery 3.7.1.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>*Alergény:</p>
+        <p class="allergy">
+            1 - Obilniny obsahujúce lepok; 
+            2 - Kôrovce; 3 - Vajcia; 
+            4 - Ryby; 5 - Arašidy; 
+            6 - Sójové zrná; 7 - Mlieko a mliečne výrobky; 
+            8 - Orechy; 9 - Zeler;
+            10 - Horčica; 11 - Sezamové semená;
+            12 - Oxid siričitý a siričitany;
+            13 - Vlčí bôb; 14 - Mäkkýše
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
